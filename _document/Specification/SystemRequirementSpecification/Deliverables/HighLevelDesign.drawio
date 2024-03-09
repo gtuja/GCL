@@ -1,0 +1,105 @@
+<mxfile host="65bd71144e">
+    <diagram id="OVf31P2fylJ3_W29zeNy" name="HLD">
+        <mxGraphModel dx="2525" dy="1416" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe WPC&amp;quot;, &amp;quot;Segoe UI&amp;quot;, system-ui, Ubuntu, &amp;quot;Droid Sans&amp;quot;, sans-serif; font-size: 14px; font-weight: 400; text-align: left;&quot;&gt;GCL&lt;/span&gt;" style="shape=folder;fontStyle=1;tabWidth=80;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;" vertex="1" parent="1">
+                    <mxGeometry x="601" y="40" width="200" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe WPC&amp;quot;, &amp;quot;Segoe UI&amp;quot;, system-ui, Ubuntu, &amp;quot;Droid Sans&amp;quot;, sans-serif; font-size: 14px; font-weight: 400; text-align: left;&quot;&gt;UA.NET&lt;/span&gt;" style="shape=folder;fontStyle=1;tabWidth=80;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="40" width="200" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe WPC&amp;quot;, &amp;quot;Segoe UI&amp;quot;, system-ui, Ubuntu, &amp;quot;Droid Sans&amp;quot;, sans-serif; font-size: 14px; font-weight: 400; text-align: left;&quot;&gt;ATL&lt;/span&gt;" style="shape=folder;fontStyle=1;tabWidth=80;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;" vertex="1" parent="1">
+                    <mxGeometry x="1130" y="40" width="200" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe WPC&amp;quot;, &amp;quot;Segoe UI&amp;quot;, system-ui, Ubuntu, &amp;quot;Droid Sans&amp;quot;, sans-serif; font-size: 14px; font-weight: 400; text-align: left;&quot;&gt;SUL&lt;/span&gt;" style="shape=folder;fontStyle=1;tabWidth=80;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;" vertex="1" parent="1">
+                    <mxGeometry x="481" y="620" width="440" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;entryX=-0.011;entryY=0.333;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="3">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="240" y="110" as="sourcePoint"/>
+                        <mxPoint x="400" y="110" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="Event handlers&lt;br&gt;[entry, progress, exit, log]" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;entryX=0;entryY=0.762;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="3">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="240" y="200" as="sourcePoint"/>
+                        <mxPoint x="400" y="200" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" value="Task control features&lt;br&gt;[register, start, pause, resume, stop, busy or not]" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;exitX=0;exitY=0;exitDx=0;exitDy=120;exitPerimeter=0;entryX=0;entryY=0;entryDx=200;entryDy=120;entryPerimeter=0;" edge="1" parent="1" source="3" target="4">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="320" y="260" as="sourcePoint"/>
+                        <mxPoint x="480" y="260" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="" style="endArrow=none;startArrow=diamondThin;endFill=0;startFill=0;html=1;verticalAlign=bottom;labelBackgroundColor=none;strokeWidth=1;startSize=8;endSize=8;entryX=0;entryY=0;entryDx=200;entryDy=120;entryPerimeter=0;exitX=0;exitY=0;exitDx=0;exitDy=120;exitPerimeter=0;" edge="1" parent="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="1130" y="106" as="sourcePoint"/>
+                        <mxPoint x="801" y="106" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="Task control features&lt;br&gt;[register, start, pause, resume, stop, busy or not]" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;entryX=0;entryY=0;entryDx=200;entryDy=120;entryPerimeter=0;exitX=-0.008;exitY=0.331;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="1128.4" y="158.51" as="sourcePoint"/>
+                        <mxPoint x="801" y="159" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="Invoke events&lt;br&gt;&lt;span style=&quot;background-color: rgb(24, 20, 29);&quot;&gt;[entry, progress, exit, log]&lt;/span&gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;exitX=0;exitY=0;exitDx=0;exitDy=165;exitPerimeter=0;entryX=0;entryY=0;entryDx=200;entryDy=165;entryPerimeter=0;" edge="1" parent="1" source="5" target="3">
+                    <mxGeometry x="-0.0274" y="15" width="160" relative="1" as="geometry">
+                        <mxPoint x="1070" y="260" as="sourcePoint"/>
+                        <mxPoint x="1230" y="260" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe WPC&amp;quot;, &amp;quot;Segoe UI&amp;quot;, system-ui, Ubuntu, &amp;quot;Droid Sans&amp;quot;, sans-serif; font-size: 14px; font-weight: 400; text-align: left;&quot;&gt;TL&lt;br&gt;[Template]&lt;/span&gt;" style="shape=folder;fontStyle=1;tabWidth=80;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;" vertex="1" parent="1">
+                    <mxGeometry x="1130" y="320" width="200" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;exitX=0.505;exitY=0.143;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="13" target="5">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="710" y="310" as="sourcePoint"/>
+                        <mxPoint x="870" y="310" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe WPC&amp;quot;, &amp;quot;Segoe UI&amp;quot;, system-ui, Ubuntu, &amp;quot;Droid Sans&amp;quot;, sans-serif; font-size: 14px; font-weight: 400; text-align: left;&quot;&gt;TL&lt;br&gt;[ XXX Task]&lt;/span&gt;" style="shape=folder;fontStyle=1;tabWidth=80;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;" vertex="1" parent="1">
+                    <mxGeometry x="1360" y="320" width="200" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;exitX=0;exitY=0;exitDx=140;exitDy=30;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="15" target="5">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="1241" y="360.03" as="sourcePoint"/>
+                        <mxPoint x="1410" y="250" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1500" y="290"/>
+                            <mxPoint x="1230" y="290"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0;entryDx=260;entryDy=30;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="4" target="6">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="1030" y="520" as="sourcePoint"/>
+                        <mxPoint x="1190" y="520" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0;entryDx=260;entryDy=30;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="3" target="6">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="1030" y="520" as="sourcePoint"/>
+                        <mxPoint x="1190" y="520" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0;entryDx=260;entryDy=30;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="13" target="6">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="1030" y="520" as="sourcePoint"/>
+                        <mxPoint x="740" y="650" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;entryX=0;entryY=0;entryDx=260;entryDy=30;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="15" target="6">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="1070" y="560" as="sourcePoint"/>
+                        <mxPoint x="1230" y="560" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
