@@ -45,8 +45,8 @@ Hopefully this is the first step for that.<br>
 - [Data Flow Diagram](https://github.com/gtuja/GCL/blob/main/_document/Specification/SoftwareDetailedDesign/Deliverables/DataFlowDiagram.drawio)
 
 # Reference
-- [Static Analysis Report]
-- [Unit Test Report]
-- [Doxygen Report]
+- [Static Analysis Report]() TBD.
+- [Unit Test Report]() TBD.
+- [Doxygen Report]() TBD.
 
 Copyleft 2024 Gtuja. All right reversed.
