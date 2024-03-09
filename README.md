@@ -3,13 +3,13 @@
 G? class library
 # Preface
 This project started as a hobby, teach myself C#, not to mention very open source.<br>
-Actually I'm not good at .net programming, neighter english.<br>
+Actually I'm not good at .net programming, neither english.<br>
 Have been living in embedded world about 20 years with data sheet, peripheral, interrupt, etc.<br>
 It's time to turn around and find a way to hand over something to my fellow.<br>
 Some kind of UML, e.g., package diagram, class diagram, sequence diagram, etc, shall be a good way to that<br>
 so I'd like to mention those with iterative work flow on github as possible as I can.<br>
-Believe in occam's razor but insight should not have come without enormous exprience.<br>
-Hopely this is the first step for that.<br>
+Believe in occam's razor but insight should not have come without enormous experience.<br>
+Hopefully this is the first step for that.<br>
 
 # Abbreviation
 - GCL : G? Class Library
@@ -47,7 +47,7 @@ Hopely this is the first step for that.<br>
 ## 1. SRS
 ### 1.1. Overview
 - UA.NET might have needs some kind of time-consuming tasks or services.
-- GCL itselft is a class library that provide something convenient features to UA.NET.
+- GCL itself is a class library that provide something convenient features to UA.NET.
 - As the first feature GCL shall provide task feature AKA TCL.
 - TL is a class library that do something for UA.NET through TCL.
 ### 1.2. System organization
@@ -60,7 +60,7 @@ Hopely this is the first step for that.<br>
 #### 1.3.2. GCL
 - GCL should define interfaces below between GCL and UA.NET. to handle TL.
 > 1. define interfaces of event handler methods shall be implemented by UA.NET.
-> 2. provide interfacs for task control features, e.g., register, start, stop, pause, resume, fetch status., to UA.NET.
+> 2. provide interfaces for task control features, e.g., register, start, stop, pause, resume, fetch status., to UA.NET.
 - GCL should define arguments on on each task control features.
 - GCL should events, e.g., entry, progress, exit, log, invoked by TL with event handlers set by UA.NET.  
 #### 1.3.3. TL
