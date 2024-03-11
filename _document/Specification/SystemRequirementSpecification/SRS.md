@@ -1,5 +1,8 @@
 # System Requirement Specification
-
+- Here we define SRS regarding ovrall system.
+- Details shall be define lower specification, e.g, SWRS, SWDD.
+# History
+- v0.1(draft)
 # Abbreviation
 - GCL : G? Class Library
 - TCL : Task Control Library
@@ -13,15 +16,16 @@
 - SWDD : Software Detailed Design
 - UML : Unified Modeling Language
 - UI : User Interface
-
-# System organization
-- **[SRS#001]** There are four actors in this system, i.e., UA.NET, GCL, TL, SUL.
-- **[SRS#002]** UA.NET might have needs some kind of time-consuming tasks or services.
-- **[SRS#003]** GCL itself is a class library that provide something convenient features to UA.NET.
-- **[SRS#004]** As the first feature, GCL shall provide task feature AKA TCL.
-- **[SRS#005]** TL is a class library that do something for UA.NET through TCL.
-- **[SRS#006]** UA.NET, GCL and TL should handle features on *[Features]([www.yahoo.co.jp](https://github.com/gtuja/GCL)).*
-- **[SRS#007]** SUL shall provide general purpose utilities for all actors. 
+# Table of Contents
+-
+-
+# System composition
+- **[SRS#001]** There are three actors in this system, i.e., UA.NET, GCL, SUL.
+- **[SRS#002]** UA.NET shall need fetaure, e.g., time-consuming task, service, etc.
+- **[SRS#003]** GCL itself is a class library that provides something convenient features to UA.NET.
+- **[SRS#004]** As the first, GCL shall provide some task feature AKA TCL.
+- **[SRS#007]** SUL is a class library also, provides general purpose utilities in GCL as a sub-module.
+- **[SRS#007]** Refer diliverable, high level design, is a class library also, provides general purpose utilities in GCL as a sub-module.
 
 # Features
 ## UA.NET
