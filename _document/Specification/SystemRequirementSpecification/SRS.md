@@ -9,8 +9,11 @@
 - [History](#history)
 - [Abbreviation](#abbreviation)
 - [1. System Organization](#1_system_organization)
-- [History](#history)
-- [History](#history)
+- [2. Features](#2_features)
+- [2.1. UA.NET](#2_1_ua_net)
+- [2.2. GCL](#2_2_gcl)
+- [2.3. SUL](#2_3_sul)
+
 </details>
 
 <div id="history"></div>
