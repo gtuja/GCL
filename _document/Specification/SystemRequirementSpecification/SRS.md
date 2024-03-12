@@ -59,10 +59,12 @@
 <details open>
 <summary><font size="5"><b>2. Features</b></font></summary>
 
+- [TOC](#toc)
 <div id="2_1_ua_net"></div>
 <details open>
 <summary><font size="5"><b>2.1. UA.NET</b></font></summary>
 
+- [TOC](#toc)
 - **[SRS#008]** UA.NET shall handle UI controls on it.
 - **[SRS#009]** UA.NET shall implement event handlers to update UI controls on it when events are invoked by GCL.
 </details>
@@ -71,6 +73,7 @@
 <details open>
 <summary><font size="5"><b>2.2. GCL</b></font></summary>
 
+- [TOC](#toc)
 - **[SRS#010]** GCL shall define interfaces below between GCL and UA.NET.
 > 1. define interfaces of event handler methods shall be implemented by UA.NET.
 > 2. provide interfaces for feature task TCL, e.g., register, start, stop, pause, resume, fetch status., to UA.NET.
@@ -83,6 +86,7 @@
 <details open>
 <summary><font size="5"><b>2.3. SUL</b></font></summary>
 
+- [TOC](#toc)
 - **[SRS#013]** TL should provide interfaces, e.g., start, stop, pause, resume, fetch status, to control itself by TCL.
 - **[SRS#014]** TL shall invoke events, e.g., entry, progress, exit, log, while doing something.
 - **[SRS#015]** What should TL do is feature specific, shall be defined at *[SWDD](https://github.com/gtuja/GCL/blob/main/_document/Specification/SoftwareDetailedDesign/SWDD.md)*.
