@@ -4,7 +4,7 @@
 
 <div id="toc"></div>
 <details open>
-<summary><font size="5"><b># Table of Contents</b></font></summary>
+<summary><font size="5"><b>Table of Contents</b></font></summary>
 
 - [History](#history)
 - [Abbreviation](#abbreviation)
