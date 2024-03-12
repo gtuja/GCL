@@ -1,6 +1,6 @@
-# System Requirement Specification
-- Here we define SRS regarding overall system.
-- Details shall be define lower specification, e.g, SWRS, SWDD.
+# Software Requirement Specification
+- Here we define SWRS regarding software implementation.
+- As usual SWRS shall define specification according to the higer specification, SRS.
 
 <div id="toc"></div>
 <details open>
