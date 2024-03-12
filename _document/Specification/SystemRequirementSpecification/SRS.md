@@ -21,7 +21,7 @@
 <summary><font size="5"><b>History</b></font></summary> 
 
 - [TOC](#toc)
-- v0.1(draft)
+- v0.1
 - 
 </details>
 
@@ -54,8 +54,8 @@
 - **[SRS#002]** UA.NET shall need features, e.g., time-consuming task, service, etc.
 - **[SRS#003]** GCL itself is a class library that provides something convenient features to UA.NET.
 - **[SRS#004]** As the first feature, GCL shall provide some task feature AKA TCL.
-- **[SRS#007]** SUL is a class library also, provides general purpose utilities in GCL as a sub-module.
-- **[SRS#007]** High level design shall be handed in as a deliverable to show relationships between actors.
+- **[SRS#005]** SUL is a class library also, provides general purpose utilities in GCL as a sub-module.
+- **[SRS#006]** High level design shall be handed in as a deliverable to show relationships between actors.
 </details>
 
 <div id="2_features"></div>
@@ -68,8 +68,8 @@
 <summary><font size="5"><b>2.1. UA.NET</b></font></summary>
 
 - [TOC](#toc)
-- **[SRS#008]** UA.NET shall compose UI controls on it to accept user action.
-- **[SRS#009]** UA.NET shall implement event handlers to update UI controls on it when events are invoked by GCL.
+- **[SRS#007]** UA.NET shall compose UI controls on it to accept user action.
+- **[SRS#008]** UA.NET shall implement event handlers to update UI controls on it when events are invoked by GCL.
 </details>
 
 <div id="2_2_gcl"></div>
@@ -77,11 +77,11 @@
 <summary><font size="5"><b>2.2. GCL</b></font></summary>
 
 - [TOC](#toc)
-- **[SRS#010]** GCL shall define interfaces below between GCL and UA.NET.
+- **[SRS#009]** GCL shall define interfaces below between GCL and UA.NET.
 > 1. define interfaces of event handler methods shall be implemented by UA.NET.
 > 2. provide interfaces for task feature, e.g., register, start, stop, pause, resume, fetch status., to UA.NET.
-- **[SRS#011]** GCL shall define interface arguments on each task feature.
-- **[SRS#012]** GCL shall define events, e.g., trigger, progress, log, status.
+- **[SRS#010]** GCL shall define interface arguments on each task feature.
+- **[SRS#011]** GCL shall define events, e.g., trigger, progress, log, status.
 - **[SRS#012]** GCL shall composite proper events during task processing with event handlers set by UA.NET.  
 </details>
 
@@ -91,9 +91,9 @@
 
 - [TOC](#toc)
 - **[SRS#013]** SUL is a static class library.
-- **[SRS#013]** SUL shall provide general purpose methods.
-- **[SRS#013]** SUL is an independent library.
-- **[SRS#013]** SUL shall be used by others as a sub module.
+- **[SRS#014]** SUL shall provide general purpose methods.
+- **[SRS#015]** SUL is an independent library.
+- **[SRS#016]** SUL shall be used by others as a sub module.
 </details>
 </details>
 
