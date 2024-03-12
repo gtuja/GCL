@@ -68,7 +68,7 @@
 <summary><font size="5"><b>2.1. UA.NET</b></font></summary>
 
 - [TOC](#toc)
-- **[SRS#008]** UA.NET shall handle UI controls on it.
+- **[SRS#008]** UA.NET shall compose UI controls on it to accept user action.
 - **[SRS#009]** UA.NET shall implement event handlers to update UI controls on it when events are invoked by GCL.
 </details>
 
@@ -79,10 +79,10 @@
 - [TOC](#toc)
 - **[SRS#010]** GCL shall define interfaces below between GCL and UA.NET.
 > 1. define interfaces of event handler methods shall be implemented by UA.NET.
-> 2. provide interfaces for feature task TCL, e.g., register, start, stop, pause, resume, fetch status., to UA.NET.
-- **[SRS#011]** GCL shall define arguments on each TCL feature.
+> 2. provide interfaces for task feature, e.g., register, start, stop, pause, resume, fetch status., to UA.NET.
+- **[SRS#011]** GCL shall define interface arguments on each task feature.
 - **[SRS#012]** GCL shall define events, e.g., trigger, progress, log, status.
-- **[SRS#012]** GCL shall composite proper events during process using event handlers set by UA.NET.  
+- **[SRS#012]** GCL shall composite proper events during task processing with event handlers set by UA.NET.  
 </details>
 
 <div id="2_3_sul"></div>
@@ -90,10 +90,10 @@
 <summary><font size="5"><b>2.3. SUL</b></font></summary>
 
 - [TOC](#toc)
-- **[SRS#013]** TL should provide interfaces, e.g., start, stop, pause, resume, fetch status, to control itself by TCL.
-- **[SRS#014]** TL shall invoke events, e.g., entry, progress, exit, log, while doing something.
-- **[SRS#015]** What should TL do is feature specific, shall be defined at *[SWDD](https://github.com/gtuja/GCL/blob/main/_document/Specification/SoftwareDetailedDesign/SWDD.md)*.
-- **[SRS#016]** TL shall be implemented by each features, e.g., Template, Doxygen Parser, etc.
+- **[SRS#013]** SUL is a static class library.
+- **[SRS#013]** SUL shall provide general purpose methods.
+- **[SRS#013]** SUL is an independent library.
+- **[SRS#013]** SUL shall be used by others as a sub module.
 </details>
 </details>
 
