@@ -87,9 +87,23 @@
 > vidResume
 > vidStop
 > enuGetStatus
+- **[SRS#008]** Gcl.Tcl shall define enumeration type below to UA.NET and Gcl.Tcl.
+> TaskType : Template(mandatory), DxgnParser, Scp, Tcp, etc.
+> TaskStatus : None, Initialized, Ready, Dormant, Paused, Busy, Terminated.
+- **[SRS#008]** Gcl.Tcl shall dedine classes below in order to hand over arguments on each interface between UA.NET and Gcl.Tcl or Gcl.Tcl itself.
+> EventTriggerContentArgs
+>> strContent
+> EventProgress
+>> s32Maximum
+>> s32Value
+> vidHandleEventStatus
+>> str
 
-
-
+> vidHandleEventTriggerContent
+> vidHandleEventProgress
+> vidHandleEventStatus
+> vidHandleEventLog
+> vidHandleEventLog
 
 </details>
 
