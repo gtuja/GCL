@@ -50,12 +50,10 @@
 <summary><font size="5"><b>1. System Organization</b></font></summary>
 
 - [TOC](#toc)
-- **[SRS#001]** There are three actors in this system, i.e., UA.NET, GCL, SUL.
-- **[SRS#002]** UA.NET shall need features, e.g., time-consuming task, service, etc.
-- **[SRS#003]** GCL itself is a class library that provides something convenient features to UA.NET.
-- **[SRS#004]** As the first feature, GCL shall provide some task feature AKA TCL.
-- **[SRS#005]** SUL is a class library also, provides general purpose utilities in GCL as a sub-module.
-- **[SRS#006]** High level design shall be handed in as a deliverable to show relationships between actors.
+- **[SWRS#001]** There are packages below those provide features to actor UA.NET.
+> Gcl.Tcl, Gcl.Tcl.TaskManager, Gcl.Tcl.Task, Gcl.Sul, Gcl.Sul.Wpf.
+- **[SWRS#002]** Dtails of each package shall be defined in 2.features.
+- **[SWRS#006]** Package diagram shall be handed in as a deliverable to show relationships between packages and UA.NET..
 </details>
 
 <div id="2_features"></div>
@@ -63,13 +61,36 @@
 <summary><font size="5"><b>2. Features</b></font></summary>
 
 - [TOC](#toc)
-<div id="2_1_ua_net"></div>
+<div id="2_1_gcl_tcl"></div>
 <details open>
-<summary><font size="5"><b>2.1. UA.NET</b></font></summary>
+<summary><font size="5"><b>2.1. Gcl.Tcl</b></font></summary>
 
 - [TOC](#toc)
-- **[SRS#007]** UA.NET shall compose UI controls on it to accept user action.
-- **[SRS#008]** UA.NET shall implement event handlers to update UI controls on it when events are invoked by GCL.
+- **[SRS#007]** Gcl.Tcl is set of interfaces and classes used by UA.NET and Gcl.Tcl itself, i.e., Gcl.Tcl.xxx..
+- **[SRS#008]** Gcl.Tcl shall dedine interfaces below to link UA.NET and Gcl.Tcl.
+> ITclApplication, ITclManager, ITask
+- **[SRS#008]** ITclApplication shall dedine methods below to UA.NET to update UI controls on it when events are invoked by Gcl.Tcl.Manager.
+> vidHandleEventTriggerContent
+> vidHandleEventProgress
+> vidHandleEventStatus
+> vidHandleEventLog
+- **[SRS#008]** ITclManager shall define methods below to provide task feature for UA.NET.
+> s32Register
+> vidStart
+> vidPause
+> vidResume
+> vidStop
+> enuGetStatus
+- **[SRS#008]** ITclTask shall define methods below to Gcl.Tcl.Task for Gcl.Tcl.Manager.
+> vidStart
+> vidPause
+> vidResume
+> vidStop
+> enuGetStatus
+
+
+
+
 </details>
 
 <div id="2_2_gcl"></div>
