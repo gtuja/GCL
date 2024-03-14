@@ -77,22 +77,27 @@
 - 
 - **[SRS#007]** Gcl.Tcl is a package holding interfaces and classes for UA.NET and Gcl.Tcl itself.
 - **[SRS#007]** Gcl.Tcl shall define enumeration type below and for UA.NET and Gcl.Tcl itself.
-> TclTaskType
->> Template
->> TemplateService
->> DxgnParser
->> ScpService
->> TcpService
-> TclTaskStatus
->> None
->> Initialized
->> Idle
->> Dormant
->> Busy
->> Terminated
+> TclTaskType<br>
+>> Template<br>
+>> TemplateService<br>
+> TclTaskStatus<br>
+>> None<br>
+>> Initialized<br>
+>> Idle<br>
+>> Dormant<br>
+>> Busy<br>
+>> Terminated<br>
 
-- **[SRS#008]** TclTaskType shall define task feature to  UA.NET and Gcl.Tcl.
+- **[SRS#008]** TclTaskType is tightly linked with UA.NET requirements.
+- **[SRS#008]** Gcl.Tcl provide only templates as a sample code.
+- **[SRS#008]** If there is some task feature UA.NET want, it shall be added as a new TclTaskType.
+- **[SRS#008]** For example, UA.NET need sirial communication service, some kind of TclTaskType shall add, e.g., ScpService.
+- **[SRS#008]** It should be coherent that coresponding Gcl.Tcl.ScpService would be managed as a submodule.
+- **[SRS#008]** Gcl.Tcl shall play an intermediary role with system perspective view.
+- **[SRS#008]** UA.NET and Tasks, e.g. Gcl.Tcl.ScpService are independent for each other, 
 
+
+-
 - **[SRS#008]** Gcl.Tcl shall dedine interfaces below to link UA.NET and Gcl.Tcl.
 > ITclApplication<br>
 - **[SRS#008]** ITclApplication shall dedine methods below to UA.NET to update UI controls on it when events are invoked by Gcl.Tcl.Manager.
