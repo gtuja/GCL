@@ -75,7 +75,7 @@
 - **[SRS#007]** Gcl.Tcl is set of interfaces and classes used by UA.NET and Gcl.Tcl itself, i.e., Gcl.Tcl.xxx..
 - **[SRS#008]** Gcl.Tcl shall dedine interfaces below to link UA.NET and Gcl.Tcl.
 
-> ITclApplication
+> aITclApplication
 > ITclManager
 > ITask
 - **[SRS#008]** ITclApplication shall dedine methods below to UA.NET to update UI controls on it when events are invoked by Gcl.Tcl.Manager.
