@@ -51,8 +51,14 @@
 
 - [TOC](#toc)
 - **[SWRS#001]** There are packages below those provide features to actor UA.NET.
-> Gcl.Tcl, Gcl.Tcl.TaskManager, Gcl.Tcl.Task, Gcl.Sul, Gcl.Sul.Wpf.
-- **[SWRS#002]** Dtails of each package shall be defined in 2.features.
+> Gcl.Tcl
+> Gcl.Tcl.TaskManager
+> Gcl.Tcl.Task
+> Gcl.Tcl.Template
+> Gcl.Tcl.TemplateService
+> Gcl.Sul
+> Gcl.Sul.Wpf
+- **[SWRS#002]** Dtails of each package shall be defined in [2.features](#2_features).
 - **[SWRS#006]** Package diagram shall be handed in as a deliverable to show relationships between packages and UA.NET..
 </details>
 
@@ -95,17 +101,13 @@
 - **[SRS#008]** Gcl.Tcl shall dedine classes below in order to hand over arguments on each interface between UA.NET and Gcl.Tcl or Gcl.Tcl itself.
 > EventTriggerContentArgs
 >> strContent
-> EventProgress
+> EventProgressArgs
 >> s32Maximum
 >> s32Value
-> vidHandleEventStatus
->> str
-
-> vidHandleEventTriggerContent
-> vidHandleEventProgress
-> vidHandleEventStatus
-> vidHandleEventLog
-> vidHandleEventLog
+> EventStatusArgs
+>> strStatus
+> EventLogArgs
+>> strLog
 
 </details>
 
