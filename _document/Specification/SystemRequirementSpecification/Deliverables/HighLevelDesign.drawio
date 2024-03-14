@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="OVf31P2fylJ3_W29zeNy" name="HLD">
-        <mxGraphModel dx="2668" dy="1298" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="816" dy="476" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -19,13 +19,13 @@
                         <mxPoint x="440" y="150" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="8" value="Event handlers&lt;br&gt;[entry, progress, exit, log]" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;entryX=0;entryY=0.762;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="3" edge="1">
+                <mxCell id="8" value="Event handlers" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;entryX=0;entryY=0.762;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
                     <mxGeometry width="160" relative="1" as="geometry">
-                        <mxPoint x="280" y="240" as="sourcePoint"/>
-                        <mxPoint x="440" y="240" as="targetPoint"/>
+                        <mxPoint x="280" y="274" as="sourcePoint"/>
+                        <mxPoint x="703" y="274.02" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="9" value="Task control features&lt;br&gt;[register, start, pause, resume, stop, busy or not]" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;exitX=0;exitY=0;exitDx=0;exitDy=120;exitPerimeter=0;entryX=0;entryY=0;entryDx=200;entryDy=120;entryPerimeter=0;" parent="1" source="3" target="4" edge="1">
+                <mxCell id="9" value="Task control features&lt;br&gt;[register, start, pause, resume, fetch status]" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;exitX=0;exitY=0;exitDx=0;exitDy=120;exitPerimeter=0;entryX=0;entryY=0;entryDx=200;entryDy=120;entryPerimeter=0;" parent="1" source="3" target="4" edge="1">
                     <mxGeometry width="160" relative="1" as="geometry">
                         <mxPoint x="360" y="300" as="sourcePoint"/>
                         <mxPoint x="520" y="300" as="targetPoint"/>
@@ -51,17 +51,10 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="20" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe WPC&amp;quot;, &amp;quot;Segoe UI&amp;quot;, system-ui, Ubuntu, &amp;quot;Droid Sans&amp;quot;, sans-serif; font-size: 14px; font-weight: 400; text-align: left;&quot;&gt;SUCLW&lt;br&gt;(Static Utility Class Library for WPF)&lt;br&gt;&lt;/span&gt;" style="shape=folder;fontStyle=1;tabWidth=80;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;" vertex="1" parent="1">
-                    <mxGeometry x="90" y="520" width="229" height="210" as="geometry"/>
-                </mxCell>
-                <mxCell id="21" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0;entryDx=154.5;entryDy=30;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="4" target="20">
+                <mxCell id="22" value="Invoke events&lt;br&gt;[update trigger, progress, log, status]" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;exitX=0;exitY=0;exitDx=0;exitDy=120;exitPerimeter=0;entryX=0;entryY=0;entryDx=200;entryDy=120;entryPerimeter=0;" edge="1" parent="1">
                     <mxGeometry width="160" relative="1" as="geometry">
-                        <mxPoint x="1140" y="490" as="sourcePoint"/>
-                        <mxPoint x="1300" y="490" as="targetPoint"/>
-                        <Array as="points">
-                            <mxPoint x="180" y="440"/>
-                            <mxPoint x="244" y="440"/>
-                        </Array>
+                        <mxPoint x="704" y="241" as="sourcePoint"/>
+                        <mxPoint x="281" y="241" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
             </root>
