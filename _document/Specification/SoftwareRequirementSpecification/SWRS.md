@@ -51,15 +51,15 @@
 
 - [TOC](#toc)
 - **[SWRS#001]** There are packages below those provide features to actor UA.NET.
-'''
-- Gcl.Tcl
- - Gcl.Tcl.TaskManager
-> Gcl.Tcl.Task
-> Gcl.Tcl.Template
-> Gcl.Tcl.TemplateService
-> Gcl.Sul
-> Gcl.Sul.Wpf
-'''
+
+> Gcl.Tcl<br>
+> Gcl.Tcl.TaskManager<br>
+> Gcl.Tcl.Task<br>
+> Gcl.Tcl.Template<br>
+> Gcl.Tcl.TemplateService<br>
+> Gcl.Sul<br>
+> Gcl.Sul.Wpf<br>
+
 - **[SWRS#002]** Dtails of each package shall be defined in [2.features](#2_features).
 - **[SWRS#006]** Package diagram shall be handed in as a deliverable to show relationships between packages and UA.NET..
 </details>
