@@ -126,6 +126,7 @@
 > vidResume<br>
 > vidStop<br>
 > enuGetStatus<br>
+> vidDeregister<br>
 
 - **[SRS#008]** ITclManager shall define event handlers below and those shall be implemented by Gcl.Tcl.TaskManager to compose and invoke events to UA.NET as needed, when events are invoked by Gcl.Tcl.Task.
 > vidHandleTaskEntry<br>
@@ -166,21 +167,33 @@
 >> strLog<br>
 
 - **[SRS#008]** Gcl.Tcl shall define method arguments below of each method defined in ITaskManager.
-> TaskRegisterArgs<br>
+> TclTaskRegisterArgs<br>
 
 >> enuTaskType<br>
 
-> TaskStartArgs<br>
+> TclTaskStartArgs<br>
 
 >> s32TaskId<br>
 
-> TaskPauseArgs<br>
+> TclTaskPauseArgs<br>
 
 >> s32TaskId<br>
 
-> EventTclLogNotified<br>
+> TclTaskResumeArgs<br>
 
->> strLog<br>
+>> s32TaskId<br>
+
+> TclTaskStopArgs<br>
+
+>> s32TaskId<br>
+
+> TclTaskStatusArgs<br>
+
+>> s32TaskId<br>
+
+> TclTaskDeregisterArgs<br>
+
+>> s32TaskId<br>
 
 - **[SRS#008]** Gcl.Tcl shall define method arguments below of each method defined in ITclTask.
 > EventTclTriggerContentChangedArgs<br>
@@ -200,14 +213,32 @@
 
 >> strLog<br>
 
+- **[SRS#008]** Gcl.Tcl shall define event handler arguments below of each method defined in ITclTaskManager.
+
+> TaskStartArgs<br>
+
+>> TBD<br>
+
+> TaskPauseArgs<br>
+
+>> TBD<br>
+
+> TaskResumeArgs<br>
+
+>> TBD<br>
+
+> TaskStopArgs<br>
+
+>> TBD<br>
+
+> TaskStatusArgs<br>
+
+>> TBD<br>
+
+- **[SRS#008]** Gcl.Tcl shall define event arguments below of each method defined in ITclTask.
 
 
 </details>
-
-
-
-
-
 
 </details>
 
