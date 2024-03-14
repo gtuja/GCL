@@ -61,7 +61,7 @@
 > Gcl.Sul.Wpf<br>
 
 - **[SWRS#002]** Dtails of each package shall be defined in [2.features](#2_features).
-- **[SWRS#006]** Package diagram shall be handed in as a deliverable to show relationships between packages and UA.NET..
+- **[SWRS#006]** A Package diagram shall be handed in as a deliverable to show relationships between packages and UA.NET.
 </details>
 
 <div id="2_features"></div>
@@ -74,7 +74,25 @@
 <summary><font size="5"><b>2.1. Gcl.Tcl</b></font></summary>
 
 - [TOC](#toc)
-- **[SRS#007]** Gcl.Tcl is set of interfaces and classes used by UA.NET and Gcl.Tcl itself, i.e., Gcl.Tcl.xxx..
+- 
+- **[SRS#007]** Gcl.Tcl is a package holding interfaces and classes for UA.NET and Gcl.Tcl itself.
+- **[SRS#007]** Gcl.Tcl shall define enumeration type below and for UA.NET and Gcl.Tcl itself.
+> TclTaskType
+>> Template
+>> TemplateService
+>> DxgnParser
+>> ScpService
+>> TcpService
+> TclTaskStatus
+>> None
+>> Initialized
+>> Idle
+>> Dormant
+>> Busy
+>> Terminated
+
+- **[SRS#008]** TclTaskType shall define task feature to  UA.NET and Gcl.Tcl.
+
 - **[SRS#008]** Gcl.Tcl shall dedine interfaces below to link UA.NET and Gcl.Tcl.
 > ITclApplication<br>
 - **[SRS#008]** ITclApplication shall dedine methods below to UA.NET to update UI controls on it when events are invoked by Gcl.Tcl.Manager.
