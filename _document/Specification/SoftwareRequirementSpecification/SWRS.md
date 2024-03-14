@@ -51,8 +51,8 @@
 
 - [TOC](#toc)
 - **[SWRS#001]** There are packages below those provide features to actor UA.NET.
-> Gcl.Tcl
-> Gcl.Tcl.TaskManager
+  - Gcl.Tcl
+  - Gcl.Tcl.TaskManager
 > Gcl.Tcl.Task
 > Gcl.Tcl.Template
 > Gcl.Tcl.TemplateService
