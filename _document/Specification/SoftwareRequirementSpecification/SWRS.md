@@ -76,16 +76,12 @@
 - [TOC](#toc)
 - **[SRS#007]** Gcl.Tcl is set of interfaces and classes used by UA.NET and Gcl.Tcl itself, i.e., Gcl.Tcl.xxx..
 - **[SRS#008]** Gcl.Tcl shall dedine interfaces below to link UA.NET and Gcl.Tcl.
-
 > ITclApplication<br>
-> ITclManager<br>
-> ITask<br>
-
 - **[SRS#008]** ITclApplication shall dedine methods below to UA.NET to update UI controls on it when events are invoked by Gcl.Tcl.Manager.
-> vidHandleEventTriggerContent
-> vidHandleEventProgress
-> vidHandleEventStatus
-> vidHandleEventLog
+> vidHandleTclTriggerContentChanged<br>
+> vidHandleTclProgressChanged<br>
+> vidHandleTclStatusChanged<br>
+> vidHandleTclNotified<br>
 - **[SRS#008]** ITclManager shall define methods below to provide task feature for UA.NET.
 > s32Register
 > vidStart
