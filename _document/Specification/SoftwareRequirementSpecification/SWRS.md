@@ -127,7 +127,7 @@
 > vidStop<br>
 > enuGetStatus<br>
 
-- **[SRS#008]** ITclManager shall define event handlers below and those shall be implemented by Gcl.Tcl.TaskManager to compose and invoke events to UA.NET, when events are invoked by Gcl.Tcl.Task.
+- **[SRS#008]** ITclManager shall define event handlers below and those shall be implemented by Gcl.Tcl.TaskManager to compose and invoke events to UA.NET as needed, when events are invoked by Gcl.Tcl.Task.
 > vidHandleTaskEntry<br>
 > vidHandleTaskProgressChanged<br>
 > vidHandleTaskStatusChanged<br>
@@ -165,25 +165,18 @@
 
 >> strLog<br>
 
-</details>
+- **[SRS#008]** Gcl.Tcl shall define method arguments below of each method defined in ITaskManager.
+> TaskRegisterArgs<br>
 
+>> enuTaskType<br>
 
+> TaskStartArgs<br>
 
-# 20240314
+>> s32TaskId<br>
 
-- **[SRS#008]** Gcl.Tcl shall define method arguments below of each method defined in ITclTaskManager.
-> EventTclTriggerContentChangedArgs<br>
+> TaskPauseArgs<br>
 
->> strContent<br>
-
-> EventTclProgressChangedArgs<br>
-
->> s32Maximum<br>
->> s32Value<br>
-
-> EventTclStatusChanged<br>
-
->> strStatus<br>
+>> s32TaskId<br>
 
 > EventTclLogNotified<br>
 
