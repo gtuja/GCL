@@ -1,5 +1,5 @@
 # Software Requirement Specification
-- Here we define SWRS regarding software implementation.
+- Here we define SWRS as software perspective.
 - As usual SWRS shall define specification according to the higer specification, SRS.
 
 <div id="toc"></div>
@@ -68,7 +68,9 @@
 - [TOC](#toc)
 - **[SRS#007]** Gcl.Tcl is set of interfaces and classes used by UA.NET and Gcl.Tcl itself, i.e., Gcl.Tcl.xxx..
 - **[SRS#008]** Gcl.Tcl shall dedine interfaces below to link UA.NET and Gcl.Tcl.
-> ITclApplication, ITclManager, ITask
+> ITclApplication
+> ITclManager
+> ITask
 - **[SRS#008]** ITclApplication shall dedine methods below to UA.NET to update UI controls on it when events are invoked by Gcl.Tcl.Manager.
 > vidHandleEventTriggerContent
 > vidHandleEventProgress
