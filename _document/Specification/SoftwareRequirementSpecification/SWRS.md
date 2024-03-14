@@ -100,7 +100,7 @@
 - **[SRS#008]** For example, if UA.NET need serial communication service then some kind of TclTaskType shall be added, e.g., ScpService.
 - **[SRS#008]** It should be coherent that corresponding Gcl.Tcl.ScpService would be managed as a submodule.
 - **[SRS#008]** Gcl.Tcl shall play an intermediary role as system perspective view.
-- **[SRS#008]** UA.NET and Tasks, e.g. Gcl.Tcl.ScpService are independent for each other, 
+- **[SRS#008]** UA.NET and Tasks, e.g. Gcl.Tcl.ScpService are independent for each other, as long as they implement inerfaces between them.
 </details>
 
 <div id="2_1_2_gcl_tcl_interfaces"></div>
