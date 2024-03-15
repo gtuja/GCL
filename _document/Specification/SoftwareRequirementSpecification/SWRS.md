@@ -148,7 +148,7 @@
 <summary><font size="5"><b>2.1.3 Gcl.Tcl classes</b></font></summary>
 
 - **[SRS#008]** Gcl.Tcl shall define classes in order to hand over arguments on each interface defined in Gcl.Tcl.
-- **[SRS#008]** Gcl.Tcl shall define event handler arguments below of each method defined in ITclApplication.
+- **[SRS#008]** Gcl.Tcl shall define tcl event handler arguments below of each method defined in ITclApplication.
 > EventTclTriggerContentChangedArgs<br>
 
 >> strContent<br>
@@ -166,7 +166,7 @@
 
 >> strLog<br>
 
-- **[SRS#008]** Gcl.Tcl shall define method arguments below of each method defined in ITaskManager.
+- **[SRS#008]** Gcl.Tcl shall define tcl method arguments below those of each method defined in ITaskManager.
 > TclTaskRegisterArgs<br>
 
 >> enuTaskType<br>
@@ -213,7 +213,7 @@
 
 >> strLog<br>
 
-- **[SRS#008]** Gcl.Tcl shall define event handler arguments below of each method defined in ITclTaskManager.
+- **[SRS#008]** Gcl.Tcl shall define task event handler arguments below, those of each method defined in ITclTaskManager.
 
 > TaskStartArgs<br>
 
@@ -235,7 +235,7 @@
 
 >> TBD<br>
 
-- **[SRS#008]** Gcl.Tcl shall define event arguments below of each method defined in ITclTask.
+- **[SRS#008]** Gcl.Tcl shall define task event arguments below of each method defined in ITclTask.
 
 
 </details>
