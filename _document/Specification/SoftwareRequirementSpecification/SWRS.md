@@ -128,7 +128,7 @@
 > enuGetStatus<br>
 > vidDeregister<br>
 
-- **[SRS#008]** ITclManager shall define event handlers below and those shall be implemented by Gcl.Tcl.TaskManager to compose and invoke events to UA.NET as needed, when events are invoked by Gcl.Tcl.Task.
+- **[SRS#008]** ITclManager shall define event handlers below and those shall be implemented by Gcl.Tcl.TaskManager to compose ecents invoked by Gcl.Tcl.Task and invoke events to UA.NET as needed.
 > vidHandleTaskEntry<br>
 > vidHandleTaskProgressChanged<br>
 > vidHandleTaskStatusChanged<br>
