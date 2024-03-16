@@ -61,7 +61,7 @@
 > Gcl.Sul.Wpf<br>
 
 - **[SWRS#002]** Details of each package shall be defined in **[2. features](#2_features)**.
-- **[SWRS#006]** A Package diagram shall be handed in as a deliverable to show relationships between packages and UA.NET.
+- **[SWRS#003]** A Package diagram shall be handed in as a deliverable to show relationships between packages and UA.NET.
 </details>
 
 <div id="2_features"></div>
@@ -74,13 +74,21 @@
 <summary><font size="5"><b>2.1. Gcl.Tcl</b></font></summary>
 
 - [TOC](#toc)
-- **[SRS#007]** Gcl.Tcl is a package of types, interfaces and classes for UA.NET and Gcl.Tcl.
+- **[SWRS#004]** Gcl.Tcl is a package of types, events, interfaces and classes for UA.NET and Gcl.Tcl.Xxxx.
+- **[SWRS#005]** Gcl.Tcl shall play an intermediary role as system perspective view.
+- **[SWRS#006]** Gcl.Tcl shall provide templates, i.e., Gcl.Tcl.Template, Gcl.Tcl.TemplateService, as a sample code.
+- **[SWRS#007]** For an example, If UA.NET needs some task feature of serial communication protocol service, e.g., Gcl.Tcl.TaskScpService.
+- **[SWRS#008]** Gcl.Tcl shall define new task type, e.g., Gcl.Tcl.TaskType.ScpService. 
+- **[SWRS#009]** UA.NET shall pass that type as a member of arguments, Gcl.Tcl.TclRegisterArgs, using s32TaskRegister in Gcl.Tcl.TaskManager interfaces.
+- **[SWRS#010]** After that, UA.NET and Gcl.Tcl.TaskScpService is fully independent from each other, as long as they implement interfaces defined in Gcl.Tcl.
+- **[SWRS#011]** These feature are the heart of Gcl.Tcl, in other word event driven design concept.
+- **[SWRS#012]** Additionally Gcl.Tcl and UA.NET shall be implemented as an **[event aggregator design pattern](https://martinfowler.com/eaaDev/EventAggregator.html)**.
 
 <div id="2_1_1_gcl_tcl_types"></div>
 <details open>
 <summary><font size="5"><b>2.1.1 Gcl.Tcl types</b></font></summary>
 
-- **[SRS#007]** Gcl.Tcl shall define enumeration type below and for UA.NET and Gcl.Tcl.
+- **[SWRS#013]** Gcl.Tcl shall define enumeration type below and for UA.NET and Gcl.Tcl.
 
 > TclTaskType
 >> Template<br>
@@ -94,14 +102,60 @@
 >> Busy<br>
 >> Terminated<br>
 
-- **[SRS#008]** TclTaskType is tightly linked with UA.NET requirements.
-- **[SRS#008]** Gcl.Tcl provide only templates as a sample code.
-- **[SRS#008]** If there is some task feature UA.NET want, it shall be added as a new TclTaskType.
-- **[SRS#008]** For example, if UA.NET need serial communication service then some kind of TclTaskType shall be added, e.g., ScpService.
-- **[SRS#008]** It should be coherent that corresponding Gcl.Tcl.ScpService would be managed as a submodule.
-- **[SRS#008]** Gcl.Tcl shall play an intermediary role as system perspective view.
-- **[SRS#008]** UA.NET and Tasks, e.g. Gcl.Tcl.ScpService are independent for each other, as long as they implement inerfaces between them.
+- **[SWRS#014]** TclTaskType is tightly linked with UA.NET requirement.
+- **[SWRS#015]** TclTaskType shall correspond to each UA.NET requirement as mentioned at **[2.1. Gcl.Tcl](#2_1_gcl_tcl)**.
+- **[SWRS#016]** TclTaskStatus shall represent current status of a task, Gcl.Tcl.TaskXxxx, e.g., Gcl.Tcl.TaskScpService.
 </details>
+
+<div id="2_1_2_gcl_tcl_events"></div>
+<details open>
+<summary><font size="5"><b>2.1.2 Gcl.Tcl events</b></font></summary>
+
+- **[SWRS#017]** Gcl.Tcl shall define events below as members in ITclApplication to link UA.NET and Gcl.Tcl.
+- **[SWRS#018]** Event handlers for each event shall be implemented by UA.NET.
+
+> evtTclTriggerContentChanged<br>
+> evtTclProgressChanged<br>
+> evtTclStatusChanged<br>
+> evtTclLogNotified<br>
+
+- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke these events when it compose events invoked by Gcl.Tcl.TaskXxxx. 
+- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclTriggerContentChanged when there are 
+- **[SWRS#017]** Gcl.Tcl shall define events below as members in ITclApplication 
+
+- **[SRS#008]** ITclApplication shall define event handlers below and those shall be implemented by UA.NET to update UI controls on it, when events are invoked by Gcl.Tcl.TaskManager.
+> vidHandleTclTriggerContentChanged<br>
+> vidHandleTclProgressChanged<br>
+> vidHandleTclStatusChanged<br>
+> vidHandleTclLogNotified<br>
+
+- **[SRS#008]** Gcl.Tcl shall define interfaces below to link UA.NET and Gcl.Tcl.TaskManager.
+> IGclTaskManager
+
+- **[SRS#008]** ITclManager shall define methods below and those shall be implemented by Gcl.Tcl.TaskManager to provide task control features for UA.NET.
+> s32Register<br>
+> vidStart<br>
+> vidPause<br>
+> vidResume<br>
+> vidStop<br>
+> enuGetStatus<br>
+> vidDeregister<br>
+
+- **[SRS#008]** ITclManager shall define event handlers below and those shall be implemented by Gcl.Tcl.TaskManager to compose events invoked by Gcl.Tcl.Task and invoke events to UA.NET as needed.
+> vidHandleTaskEntry<br>
+> vidHandleTaskProgressChanged<br>
+> vidHandleTaskStatusChanged<br>
+> vidHandleTaskLogNotified<br>
+> vidHandleTaskExit<br>
+
+- **[SRS#008]** ITclTask shall define methods below and those shall be implemented by Gcl.Tcl.Task to provide task control methods for Gcl.Tcl.TaskManager.
+> vidStart<br>
+> vidPause<br>
+> vidResume<br>
+> vidStop<br>
+> enuGetStatus<br>
+</details>
+
 
 <div id="2_1_2_gcl_tcl_interfaces"></div>
 <details open>
@@ -128,7 +182,7 @@
 > enuGetStatus<br>
 > vidDeregister<br>
 
-- **[SRS#008]** ITclManager shall define event handlers below and those shall be implemented by Gcl.Tcl.TaskManager to compose ecents invoked by Gcl.Tcl.Task and invoke events to UA.NET as needed.
+- **[SRS#008]** ITclManager shall define event handlers below and those shall be implemented by Gcl.Tcl.TaskManager to compose events invoked by Gcl.Tcl.Task and invoke events to UA.NET as needed.
 > vidHandleTaskEntry<br>
 > vidHandleTaskProgressChanged<br>
 > vidHandleTaskStatusChanged<br>
