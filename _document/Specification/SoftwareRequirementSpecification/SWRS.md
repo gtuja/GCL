@@ -1,5 +1,5 @@
 # Software Requirement Specification
-- Here we define SWRS as software perspective.
+- Here we define SWRS with software perspective.
 - As usual SWRS shall define specification according to the higer specification, SRS.
 
 <div id="toc"></div>
@@ -50,7 +50,7 @@
 <summary><font size="5"><b>1. System Organization</b></font></summary>
 
 - [TOC](#toc)
-- **[SWRS#001]** There are packages below those provide features to actor UA.NET.
+- **[SWRS#001]** There are packages below those provide features to actor AKA UA.NET.
 
 > Gcl.Tcl<br>
 > Gcl.Tcl.TaskManager<br>
