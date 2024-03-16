@@ -112,30 +112,22 @@
 <summary><font size="5"><b>2.1.2 Gcl.Tcl events</b></font></summary>
 
 - **[SWRS#017]** Gcl.Tcl shall define events below, as members in ITclApplication to link UA.NET and Gcl.Tcl.
-- **[SWRS#018]** Event handlers for each event shall be implemented by UA.NET.
+- **[SWRS#018]** Event handlers for each event shall be implemented by UA.NET that extends Gcl.Tcl.ITclApplication.
 
 > evtTclTriggerContentChanged<br>
 > evtTclProgressChanged<br>
 > evtTclStatusChanged<br>
 > evtTclLogNotified<br>
 
-- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke these events when it composes events invoked by Gcl.Tcl.Tasks, e.g. Gcl.Tcl.TaskTemplate.. 
+- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke these events when it composes events invoked by Gcl.Tcl.Tasks, e.g. Gcl.Tcl.TaskTemplate, or decides by itself.
 - **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclTriggerContentChanged when it decides that the trigger control, e.g., Button, etc, on the UA.NET shoud be updated.
 - **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclProgressChanged when it decides that the progress control, e.g., ProgressBar, etc, on the UA.NET shoud be updated.
 - **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclStatusChanged when it decides that the status control, e.g., Label, etc, on the UA.NET shoud be updated.
-- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclLogNotified when it decides that control, e.g., String, etc, on the UA.NET shoud be updated.
-
-
-
-- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclTriggerContentChanged when it decides that the trigger content of UA.NET shoud be updated.
-- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclTriggerContentChanged when it decides that the trigger content of UA.NET shoud be updated.
-
-
-
+- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclLogNotified when it decides that some kind of showing log control, e.g., RichTextBox, etc, on the UA.NET shoud be updated.
 
 - **[SWRS#017]** Gcl.Tcl shall define events below as members in ITclApplication 
 
-- **[SRS#008]** ITclApplication shall define event handlers below and those shall be implemented by UA.NET to update UI controls on it, when events are invoked by Gcl.Tcl.TaskManager.
+- **[SRS#008]** ITclApplication shall define event handlers below, those shall be implemented by UA.NET to update UI controls on it, when events are invoked by Gcl.Tcl.TaskManager.
 > vidHandleTclTriggerContentChanged<br>
 > vidHandleTclProgressChanged<br>
 > vidHandleTclStatusChanged<br>
