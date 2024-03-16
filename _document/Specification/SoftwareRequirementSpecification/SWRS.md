@@ -50,7 +50,7 @@
 <summary><font size="5"><b>1. System Organization</b></font></summary>
 
 - [TOC](#toc)
-- **[SWRS#001]** There are packages below those provide features to actor AKA UA.NET.
+- **[SWRS#001]** There are packages below those provide features to actor AKA. UA.NET.
 
 > Gcl.Tcl<br>
 > Gcl.Tcl.TaskManager<br>
@@ -75,14 +75,14 @@
 
 - [TOC](#toc)
 - **[SWRS#004]** Gcl.Tcl is a package of types, events, interfaces and classes for UA.NET and Gcl.Tcl itself.
-- **[SWRS#005]** Gcl.Tcl shall play an intermediary role as system perspective view.
+- **[SWRS#005]** Gcl.Tcl shall play an intermediary role as system perspective point of view.
 - **[SWRS#006]** Gcl.Tcl shall provide templates, i.e., Gcl.Tcl.Template, Gcl.Tcl.TemplateService, as a sample code.
 - **[SWRS#007]** For an example, If UA.NET needs some task feature of serial communication protocol service, e.g., Gcl.Tcl.TaskScpService.
-- **[SWRS#008]** Gcl.Tcl shall define new task type, e.g., Gcl.Tcl.TaskType.ScpService. 
-- **[SWRS#009]** UA.NET shall pass that type as a member of arguments, Gcl.Tcl.TclRegisterArgs, using s32TaskRegister in Gcl.Tcl.TaskManager interfaces.
-- **[SWRS#010]** After that, UA.NET and Gcl.Tcl.TaskScpService is fully independent from each other, as long as they implement features defined in Gcl.Tcl each other.
-- **[SWRS#011]** These feature are the heart of Gcl.Tcl, in other word event driven design concept.
-- **[SWRS#012]** Additionally Gcl.Tcl and UA.NET shall be implemented as an **[event aggregator design pattern](https://martinfowler.com/eaaDev/EventAggregator.html)**.
+- **[SWRS#008]** Gcl.Tcl shall define a new task type, e.g., Gcl.Tcl.TaskType.ScpService. 
+- **[SWRS#009]** UA.NET shall pass that type as a member of arguments, Gcl.Tcl.TclRegisterArgs, of s32TaskRegister in Gcl.Tcl.TaskManager interfaces.
+- **[SWRS#010]** From now on, UA.NET and Gcl.Tcl.TaskScpService are fully independent from each other, as long as they implement features defined in Gcl.Tcl for each other.
+- **[SWRS#011]** These feature are the heart of Gcl.Tcl, in other word, event driven design concept.
+- **[SWRS#012]** Additionally Gcl.Tcl.Task, Gcl.Tcl.TaskManager, and UA.NET shall be implemented as an **[event aggregator design pattern](https://martinfowler.com/eaaDev/EventAggregator.html)**.
 
 <div id="2_1_1_gcl_tcl_types"></div>
 <details open>
