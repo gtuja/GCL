@@ -1,5 +1,5 @@
 # Software Requirement Specification
-- Here we define SWRS with software perspective.
+- Here we define SWRS as a software perspective point of view.
 - As usual SWRS shall define specification according to the higer specification, SRS.
 
 <div id="toc"></div>
@@ -75,7 +75,7 @@
 
 - [TOC](#toc)
 - **[SWRS#004]** Gcl.Tcl is a package of types, events, interfaces and classes for UA.NET and Gcl.Tcl itself.
-- **[SWRS#005]** Gcl.Tcl shall play an intermediary role as system perspective point of view.
+- **[SWRS#005]** Gcl.Tcl shall play an intermediary role as a system perspective point of view.
 - **[SWRS#006]** Gcl.Tcl shall provide templates, i.e., Gcl.Tcl.Template, Gcl.Tcl.TemplateService, as a sample code.
 - **[SWRS#007]** For an example, If UA.NET needs some task feature of serial communication protocol service, e.g., Gcl.Tcl.TaskScpService.
 - **[SWRS#008]** Gcl.Tcl shall define a new task type, e.g., Gcl.Tcl.TaskType.ScpService. 
@@ -88,7 +88,7 @@
 <details open>
 <summary><font size="5"><b>2.1.1 Gcl.Tcl types</b></font></summary>
 
-- **[SWRS#013]** Gcl.Tcl shall define enumeration type below and for UA.NET and Gcl.Tcl.
+- **[SWRS#013]** Gcl.Tcl shall define enumeration types below, for UA.NET and Gcl.Tcl itself.
 
 > TclTaskType
 >> Template<br>
@@ -104,14 +104,14 @@
 
 - **[SWRS#014]** TclTaskType is tightly linked with UA.NET requirement.
 - **[SWRS#015]** TclTaskType shall correspond to each UA.NET requirement as mentioned at **[2.1. Gcl.Tcl](#2_1_gcl_tcl)**.
-- **[SWRS#016]** TclTaskStatus shall represent current status of a task, Gcl.Tcl.TaskXxxx, e.g., Gcl.Tcl.TaskScpService.
+- **[SWRS#016]** TclTaskStatus shall represent current status of a task, e.g., Gcl.Tcl.TaskTemplate.
 </details>
 
 <div id="2_1_2_gcl_tcl_events"></div>
 <details open>
 <summary><font size="5"><b>2.1.2 Gcl.Tcl events</b></font></summary>
 
-- **[SWRS#017]** Gcl.Tcl shall define events below as members in ITclApplication to link UA.NET and Gcl.Tcl.
+- **[SWRS#017]** Gcl.Tcl shall define events below, as members in ITclApplication to link UA.NET and Gcl.Tcl.
 - **[SWRS#018]** Event handlers for each event shall be implemented by UA.NET.
 
 > evtTclTriggerContentChanged<br>
@@ -119,8 +119,20 @@
 > evtTclStatusChanged<br>
 > evtTclLogNotified<br>
 
-- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke these events when it compose events invoked by Gcl.Tcl.TaskXxxx. 
-- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclTriggerContentChanged when there are 
+- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke these events when it composes events invoked by Gcl.Tcl.Tasks, e.g. Gcl.Tcl.TaskTemplate.. 
+- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclTriggerContentChanged when it decides that the trigger control, e.g., Button, etc, on the UA.NET shoud be updated.
+- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclProgressChanged when it decides that the progress control, e.g., ProgressBar, etc, on the UA.NET shoud be updated.
+- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclStatusChanged when it decides that the status control, e.g., Label, etc, on the UA.NET shoud be updated.
+- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclLogNotified when it decides that control, e.g., String, etc, on the UA.NET shoud be updated.
+
+
+
+- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclTriggerContentChanged when it decides that the trigger content of UA.NET shoud be updated.
+- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclTriggerContentChanged when it decides that the trigger content of UA.NET shoud be updated.
+
+
+
+
 - **[SWRS#017]** Gcl.Tcl shall define events below as members in ITclApplication 
 
 - **[SRS#008]** ITclApplication shall define event handlers below and those shall be implemented by UA.NET to update UI controls on it, when events are invoked by Gcl.Tcl.TaskManager.
