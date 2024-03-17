@@ -113,12 +113,13 @@
 
 - **[SWRS#017]** Gcl.Tcl shall define events below, as members in ITclApplication to link UA.NET and Gcl.Tcl.
 
-> evtTclTriggerContentChanged<br>
-> evtTclProgressChanged<br>
-> evtTclNotified<br>
+> evtTclTaskStarted<br>
+> evtTclTaskProgressChanged<br>
+> evtTclTaskTerminated<br>
+> evtTclAsserted<br>
 
-- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke these events when it composes events invoked by Gcl.Tcl.Tasks, e.g. Gcl.Tcl.TaskTemplate, or decides by itself.
-- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclTriggerContentChanged when it decides that the trigger control, e.g., Button, etc, on the UA.NET shoud be changed.
+- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke these events when it composes events invoked by Gcl.Tcl.Tasks, e.g. Gcl.Tcl.TaskTemplate, or decides to invoke events by itself.
+- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclTaskStarted when any of registered task, e.g., Gcl.Tcl.TaskTemplate, 
 - **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclProgressChanged when it decides that the progress control, e.g., ProgressBar, etc, on the UA.NET shoud be changed.
 - **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclNotified when it decides to notify something, e.g., log, etc, to the UA.NET.
 - **[SWRS#017]** Gcl.Tcl shall define events below as members in ITclApplication 
