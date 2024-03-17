@@ -1,6 +1,6 @@
 # Software Requirement Specification
 - Here we define SWRS as a software perspective point of view.
-- As usual SWRS shall define specification according to the higer specification, SRS.
+- As usual SWRS shall define specification according to higer specification, SRS.
 
 <div id="toc"></div>
 <details open>
@@ -50,7 +50,7 @@
 <summary><font size="5"><b>1. System Organization</b></font></summary>
 
 - [TOC](#toc)
-- **[SWRS#001]** There are packages below those provide features to actor AKA. UA.NET.
+- **[SWRS#001]** There are packages below, those provide features to actor AKA. UA.NET.
 
 > Gcl.Tcl<br>
 > Gcl.Tcl.TaskManager<br>
@@ -75,13 +75,13 @@
 
 - [TOC](#toc)
 - **[SWRS#004]** Gcl.Tcl is a package of types, events, interfaces and classes for UA.NET and Gcl.Tcl itself.
-- **[SWRS#005]** Gcl.Tcl shall play an intermediary role as a system perspective point of view.
+- **[SWRS#005]** Gcl.Tcl shall play an intermediary role in ths system with a system perspective point of view.
 - **[SWRS#006]** Gcl.Tcl shall provide templates, i.e., Gcl.Tcl.Template, Gcl.Tcl.TemplateService, as a sample code.
-- **[SWRS#007]** For an example, If UA.NET needs some task feature of serial communication protocol service, e.g., Gcl.Tcl.TaskScpService.
+- **[SWRS#007]** For an example, if UA.NET needs some task feature of serial communication protocol service, e.g., Gcl.Tcl.TaskScpService.
 - **[SWRS#008]** Gcl.Tcl shall define a new task type, e.g., Gcl.Tcl.TaskType.ScpService. 
 - **[SWRS#009]** UA.NET shall pass that type as a member of arguments, Gcl.Tcl.TclRegisterArgs, of s32TaskRegister in Gcl.Tcl.TaskManager interfaces.
 - **[SWRS#010]** From now on, UA.NET and Gcl.Tcl.TaskScpService are fully independent from each other, as long as they implement features defined in Gcl.Tcl for each other.
-- **[SWRS#011]** These feature are the heart of Gcl.Tcl, in other word, event driven design concept.
+- **[SWRS#011]** This concept is the heart of Gcl.Tcl, in other word, event driven design concept.
 - **[SWRS#012]** Additionally Gcl.Tcl.Task, Gcl.Tcl.TaskManager, and UA.NET shall be implemented as an **[event aggregator design pattern](https://martinfowler.com/eaaDev/EventAggregator.html)**.
 
 <div id="2_1_1_gcl_tcl_types"></div>
@@ -116,22 +116,21 @@
 
 > evtTclTriggerContentChanged<br>
 > evtTclProgressChanged<br>
-> evtTclStatusChanged<br>
-> evtTclLogNotified<br>
+> evtTclNotified<br>
 
 - **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke these events when it composes events invoked by Gcl.Tcl.Tasks, e.g. Gcl.Tcl.TaskTemplate, or decides by itself.
-- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclTriggerContentChanged when it decides that the trigger control, e.g., Button, etc, on the UA.NET shoud be updated.
-- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclProgressChanged when it decides that the progress control, e.g., ProgressBar, etc, on the UA.NET shoud be updated.
-- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclStatusChanged when it decides that the status control, e.g., Label, etc, on the UA.NET shoud be updated.
-- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclLogNotified when it decides that some kind of showing log control, e.g., RichTextBox, etc, on the UA.NET shoud be updated.
-
+- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclTriggerContentChanged when it decides that the trigger control, e.g., Button, etc, on the UA.NET shoud be changed.
+- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclProgressChanged when it decides that the progress control, e.g., ProgressBar, etc, on the UA.NET shoud be changed.
+- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclNotified when it decides to notify something, e.g., log, etc, to the UA.NET.
 - **[SWRS#017]** Gcl.Tcl shall define events below as members in ITclApplication 
 
 - **[SRS#008]** ITclApplication shall define event handlers below, those shall be implemented by UA.NET to update UI controls on it, when events are invoked by Gcl.Tcl.TaskManager.
 > vidHandleTclTriggerContentChanged<br>
 > vidHandleTclProgressChanged<br>
-> vidHandleTclStatusChanged<br>
 > vidHandleTclLogNotified<br>
+
+
+
 
 - **[SRS#008]** Gcl.Tcl shall define interfaces below to link UA.NET and Gcl.Tcl.TaskManager.
 > IGclTaskManager
