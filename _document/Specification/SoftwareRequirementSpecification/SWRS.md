@@ -1,6 +1,6 @@
 # Software Requirement Specification
-- Here we define SWRS as a software perspective point of view.
-- As usual SWRS shall define specification according to higer specification, SRS.
+- Here we define SWRS as software perspective.
+- As usual SWRS shall define specification according to the higer specification, SRS.
 
 <div id="toc"></div>
 <details open>
@@ -74,7 +74,7 @@
 <summary><font size="5"><b>2.1. Gcl.Tcl</b></font></summary>
 
 - [TOC](#toc)
-- **[SWRS#004]** Gcl.Tcl is a package of types, interfaces, events, and classes for UA.NET and Gcl.Tcl itself.
+- **[SWRS#004]** Gcl.Tcl is a package of types, interfaces, and classes for UA.NET and Gcl.Tcl itself.
 - **[SWRS#005]** Gcl.Tcl shall play an intermediary role between UA.NET, Gcl.Tcl.Xxx.
 - **[SWRS#006]** Gcl.Tcl shall provide templates, i.e., Gcl.Tcl.Template, Gcl.Tcl.TemplateService, as a sample code.
 - **[SWRS#007]** As an example, let's say that UA.NET needs some task feature of serial communication protocol service, e.g., Gcl.Tcl.TaskScpService.
@@ -102,50 +102,76 @@
 >> Busy<br>
 >> Terminated<br>
 
+<div id="2_1_1_1_gcl_type_tcl_task_type"></div>
+<details open>
+<summary><font size="5"><b>2.1.1.1. Gcl.Tcl TclTaskType</b></font></summary>
+
+- [TOC](#toc)
 - **[SWRS#014]** TclTaskType is tightly linked with UA.NET requirement.
 - **[SWRS#015]** TclTaskType shall correspond to each UA.NET requirement as mentioned at **[2.1. Gcl.Tcl](#2_1_gcl_tcl)**.
-- **[SWRS#016]** TclTaskStatus shall represent current status of a task, e.g., Gcl.Tcl.TaskTemplate.
 </details>
 
-
-
-
-<div id="2_1_2_gcl_tcl_events"></div>
+<div id="2_1_1_2_gcl_type_tcl_task_status"></div>
 <details open>
-<summary><font size="5"><b>2.1.2 Gcl.Tcl events</b></font></summary>
+<summary><font size="5"><b>2.1.1.1. Gcl.Tcl TclTaskStatus</b></font></summary>
 
-- **[SWRS#017]** Gcl.Tcl shall define events below, as members in ITclApplication to link UA.NET and Gcl.Tcl.
+- [TOC](#toc)
+- **[SWRS#016]** TclTaskStatus shall represent current status of a task, e.g., Gcl.Tcl.TaskTemplate.
+</details>
+</details>
+
+<div id="2_1_2_gcl_tcl_interface"></div>
+<details open>
+<summary><font size="5"><b>2.1.2 Gcl.Tcl interface</b></font></summary>
+
+- **[SRS#008]** Gcl.Tcl shall define interfaces below to link UA.NET and Gcl.Tcl.
+
+> ITclApplication<br>
+> ITclTaskManager<br>
+> ITclTask<br>
+
+<div id="2_1_2_1_gcl_tcl_interface_itcl_application"></div>
+<details open>
+<summary><font size="5"><b>2.1.2.1 Gcl.Tcl ITclTaskApplication</b></font></summary>
+
+- **[SRS#008]** ITclApplication shall define event handlers below, those shall be implemented by UA.NET to do something, e.g., update UI controls on it, etc, when events, e.g., evtTclTaskStarted, evtTclTaskProgressChanged, evtTclTaskTerminated, evtTclAsserted, are invoked by Gcl.Tcl.TaskManager.
+- **[SRS#008]** These event handlers shall be handed over to Gcl.Tcl.TaskManager as interface arguments, i.e., TclRegisterArgs, through s32TclRegisterTask defined in Gcl.Tcl.ITaskManager.
+- **[SRS#008]** Detail of each event itself shall be defined in **[2.1.2.2 Gcl.Tcl ITclTaskManager](#2_1_2_2_gcl_tcl_interface_itcl_task_manager)**.
+
+> vidHandleTclTaskStarted<br>
+> vidHandleTclTaskProgressChanged<br>
+> vidHandleTclTaskTerminated<br>
+> vidHandleTclAsserted<br>
+</details>
+
+<div id="2_1_2_2_gcl_tcl_interface_itcl_task_manager"></div>
+<details open>
+<summary><font size="5"><b>2.1.2.2 Gcl.Tcl ITclTaskManager</b></font></summary>
+
+- **[SRS#008]** ITclTaskManager shall define events below, those shall be invoked by Gcl.Tcl.TaskManager.
 
 > evtTclTaskStarted<br>
 > evtTclTaskProgressChanged<br>
 > evtTclTaskTerminated<br>
 > evtTclAsserted<br>
 
-- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke these events when it composes events invoked by Gcl.Tcl.Tasks, e.g. Gcl.Tcl.TaskTemplate, or decides to invoke events by itself.
-- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclTaskStarted when any of registered task, e.g., Gcl.Tcl.TaskTemplate, 
-- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclProgressChanged when it decides that the progress control, e.g., ProgressBar, etc, on the UA.NET shoud be changed.
-- **[SWRS#017]** Gcl.Tcl.TaskManager shall invoke evtTclNotified when it decides to notify something, e.g., log, etc, to the UA.NET.
-- **[SWRS#017]** Gcl.Tcl shall define events below as members in ITclApplication 
+- **[SRS#008]** Gcl.Tcl.TaskManager shall implement these events and invoke them to UA.NET as needed.
+- **[SRS#008]** The evtTclTaskStarted shall be invoked when any of Gcl.Tcl.Task registered is started, e.g., evtTaskEntry is invoked, etc.
+- **[SRS#008]** evtTclTaskProgressChanged shall be invoked when any of Gcl.Tcl.Task registered reports progress, e.g., evtTaskProgressChanged is invoked, etc.
+- **[SRS#008]** The evtTclTaskTerminated shall be invoked when any of Gcl.Tcl.Task registered is terminated, e.g., evtTaskExit is invoked, etc.
+- **[SRS#008]** The evtTclAsserted shall be invoked when there is something to assert to UA.NET, e.g. error, exception, warning, log, etc. 
+- **[SRS#008]** ITclManager shall aggregate these events, i.e., invoked by Gcl.Tcl.Task registered, and invoke events, e.g., evtTclTaskStarted, evtTclTaskProgressChanged, evtTclTaskTerminated, evtTclAsserted, to UA.NET as needed.
 
-- **[SWRS#017]** Gcl.Tcl shall define events below, as members in ITclTask to link Gcl.Tcl.TaskManager and Gcl.Tcl.Task.
+- **[SRS#008]** Event handlers of each event are defined in ITclApplication shall be defined in **[2.1.2.1 Gcl.Tcl ITclApplication](#2_1_2_1_gcl_tcl_interface_itcl_application)**.
+- **[SRS#008]** ITclManager shall define event handlers below and those shall be implemented by Gcl.Tcl.TaskManager.
 
-> evtTaskEntry
-> evtTaskProgressChanged
-> evtTaskExit
-> evtTaskNotified
+> vidHandleTaskEntry<br>
+> vidHandleTaskProgressChanged<br>
+> vidHandleTaskExit<br>
+> vidHandleTaskAsserted<br>
 
-- **[SRS#008]** ITclApplication shall define event handlers below, those shall be implemented by UA.NET to update UI controls on it, when events are invoked by Gcl.Tcl.TaskManager.
-> vidHandleTclTriggerContentChanged<br>
-> vidHandleTclProgressChanged<br>
-> vidHandleTclLogNotified<br>
+- **[SRS#008]** ITclManager shall define methods below, those shall be implemented by Gcl.Tcl.TaskManager to provide task features for UA.NET.
 
-
-
-
-- **[SRS#008]** Gcl.Tcl shall define interfaces below to link UA.NET and Gcl.Tcl.TaskManager.
-> IGclTaskManager
-
-- **[SRS#008]** ITclManager shall define methods below and those shall be implemented by Gcl.Tcl.TaskManager to provide task control features for UA.NET.
 > s32Register<br>
 > vidStart<br>
 > vidPause<br>
@@ -153,62 +179,40 @@
 > vidStop<br>
 > enuGetStatus<br>
 > vidDeregister<br>
-
-- **[SRS#008]** ITclManager shall define event handlers below and those shall be implemented by Gcl.Tcl.TaskManager to compose events invoked by Gcl.Tcl.Task and invoke events to UA.NET as needed.
-> vidHandleTaskEntry<br>
-> vidHandleTaskProgressChanged<br>
-> vidHandleTaskStatusChanged<br>
-> vidHandleTaskLogNotified<br>
-> vidHandleTaskExit<br>
-
-- **[SRS#008]** ITclTask shall define methods below and those shall be implemented by Gcl.Tcl.Task to provide task control methods for Gcl.Tcl.TaskManager.
-> vidStart<br>
-> vidPause<br>
-> vidResume<br>
-> vidStop<br>
-> enuGetStatus<br>
 </details>
 
 
-<div id="2_1_2_gcl_tcl_interfaces"></div>
+<div id="2_1_2_3_gcl_tcl_interface_itcl_task"></div>
 <details open>
-<summary><font size="5"><b>2.1.2 Gcl.Tcl interfaces</b></font></summary>
+<summary><font size="5"><b>2.1.2.3 Gcl.Tcl ITclTask</b></font></summary>
 
-- **[SRS#008]** Gcl.Tcl shall define interfaces below to link UA.NET and Gcl.Tcl.
-> ITclApplication
+- **[SRS#008]** ITclTask shall define events below, those shall be invoked by Gcl.Tcl.TaskXxxx, e.g., Gcl.Tcl.TaskTemplate.
 
-- **[SRS#008]** ITclApplication shall define event handlers below and those shall be implemented by UA.NET to update UI controls on it, when events are invoked by Gcl.Tcl.TaskManager.
-> vidHandleTclTriggerContentChanged<br>
-> vidHandleTclProgressChanged<br>
-> vidHandleTclStatusChanged<br>
-> vidHandleTclLogNotified<br>
+> evtTaskEntry<br>
+> evtTaskProgressChanged<br>
+> evtTaskExit<br>
+> evtTaskAsserted<br>
 
-- **[SRS#008]** Gcl.Tcl shall define interfaces below to link UA.NET and Gcl.Tcl.TaskManager.
-> IGclTaskManager
+- **[SRS#008]** Gcl.Tcl.TaskManager shall handle these events, **[2.1.2.2. Gcl.Tcl.ITclTaskManager](#2_1_2_2_gcl_tcl_interface_itcl_task_manager)**.
 
-- **[SRS#008]** ITclManager shall define methods below and those shall be implemented by Gcl.Tcl.TaskManager to provide task control features for UA.NET.
-> s32Register<br>
-> vidStart<br>
-> vidPause<br>
-> vidResume<br>
-> vidStop<br>
-> enuGetStatus<br>
-> vidDeregister<br>
+- **[SRS#008]** Gcl.Tcl.Task shall implement these events and invoke them to Gcl.Tcl.TaskManager as needed.
+- **[SRS#008]** The evtTaskEntry shall be invoked when Gcl.Tcl.Task is started.
+- **[SRS#008]** The evtTaskProgressChanged shall be invoked  when Gcl.Tcl.Task reports progress.
+- **[SRS#008]** The evtTaskExit shall be invoked when Gcl.Tcl.Task exits.
+- **[SRS#008]** The evtTaskAsserted shall be invoked when there is something to assert to Gcl.Tcl.TaskManager, e.g. error, exception, warning, log, etc.
 
-- **[SRS#008]** ITclManager shall define event handlers below and those shall be implemented by Gcl.Tcl.TaskManager to compose events invoked by Gcl.Tcl.Task and invoke events to UA.NET as needed.
-> vidHandleTaskEntry<br>
-> vidHandleTaskProgressChanged<br>
-> vidHandleTaskStatusChanged<br>
-> vidHandleTaskLogNotified<br>
-> vidHandleTaskExit<br>
+- **[SRS#008]** Event handlers are defined in ITclTaskManager **[2.1.2.2 Gcl.Tcl ITclTaskManager](#2_1_2_2_gcl_tcl_interface_itcl_task_manager)**.
 
-- **[SRS#008]** ITclTask shall define methods below and those shall be implemented by Gcl.Tcl.Task to provide task control methods for Gcl.Tcl.TaskManager.
-> vidStart<br>
-> vidPause<br>
-> vidResume<br>
-> vidStop<br>
-> enuGetStatus<br>
+- **[SRS#008]** ITclTask shall define methods below, those shall be implemented by Gcl.Tcl.Task to provide task features for Gcl.Tcl.TaskManager.
+
+> vidTaskStart<br>
+> vidTaskPause<br>
+> vidTaskResume<br>
+> vidTaskStop<br>
+> enuTaskGetStatus<br>
 </details>
+</details>
+
 
 <div id="2_1_3_gcl_tcl_classes"></div>
 <details open>
@@ -217,50 +221,18 @@
 - **[SRS#008]** Gcl.Tcl shall define classes in order to hand over arguments on each interface defined in Gcl.Tcl.
 - **[SRS#008]** Gcl.Tcl shall define tcl event handler arguments below of each method defined in ITclApplication.
 > EventTclTriggerContentChangedArgs<br>
-
->> strContent<br>
-
 > EventTclProgressChangedArgs<br>
-
->> s32Maximum<br>
->> s32Value<br>
-
 > EventTclStatusChanged<br>
-
->> strStatus<br>
-
 > EventTclLogNotified<br>
-
->> strLog<br>
-
 - **[SRS#008]** Gcl.Tcl shall define tcl method arguments below those of each method defined in ITaskManager.
+
 > TclTaskRegisterArgs<br>
-
->> enuTaskType<br>
-
 > TclTaskStartArgs<br>
-
->> s32TaskId<br>
-
 > TclTaskPauseArgs<br>
-
->> s32TaskId<br>
-
 > TclTaskResumeArgs<br>
-
->> s32TaskId<br>
-
 > TclTaskStopArgs<br>
-
->> s32TaskId<br>
-
 > TclTaskStatusArgs<br>
-
->> s32TaskId<br>
-
 > TclTaskDeregisterArgs<br>
-
->> s32TaskId<br>
 
 - **[SRS#008]** Gcl.Tcl shall define method arguments below of each method defined in ITclTask.
 > EventTclTriggerContentChangedArgs<br>
