@@ -138,9 +138,9 @@
 - **[SRS#008]** These event handlers shall be handed over to Gcl.Tcl.TaskManager as interface arguments, i.e., TclRegisterArgs, through s32TclRegisterTask defined in Gcl.Tcl.ITaskManager.
 - **[SRS#008]** Detail of each event itself shall be defined in **[2.1.2.2 Gcl.Tcl ITclTaskManager](#2_1_2_2_gcl_tcl_interface_itcl_task_manager)**.
 
-> vidHandleTclTaskStarted<br>
-> vidHandleTclTaskProgressChanged<br>
-> vidHandleTclTaskTerminated<br>
+> vidHandleTclStarted<br>
+> vidHandleTclProgressChanged<br>
+> vidHandleTcTerminated<br>
 > vidHandleTclAsserted<br>
 </details>
 
@@ -150,9 +150,9 @@
 
 - **[SRS#008]** ITclTaskManager shall define events below, those shall be invoked by Gcl.Tcl.TaskManager.
 
-> evtTclTaskStarted<br>
-> evtTclTaskProgressChanged<br>
-> evtTclTaskTerminated<br>
+> evtTclStarted<br>
+> evtTclProgressChanged<br>
+> evtTclTerminated<br>
 > evtTclAsserted<br>
 
 - **[SRS#008]** Gcl.Tcl.TaskManager shall implement these events and invoke them to UA.NET as needed.
