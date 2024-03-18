@@ -160,7 +160,7 @@
 - **[SRS#008]** evtTclProgressChanged shall be invoked when any of Gcl.Tcl.Task registered reports progress, e.g., evtTaskProgressChanged is invoked, etc.
 - **[SRS#008]** The evtTclTerminated shall be invoked when any of Gcl.Tcl.Task registered is terminated, e.g., evtTaskExit is invoked, etc.
 - **[SRS#008]** The evtTclAsserted shall be invoked when there is something to assert to UA.NET, e.g. error, exception, warning, log, etc. 
-- **[SRS#008]** ITclManager shall aggregate events invoked by Gcl.Tcl.Task registered, and invoke events, e.g., evtTaskStarted, evtTclProgressChanged, evtTclTerminated, evtTclAsserted, to UA.NET as needed.
+- **[SRS#008]** ITclManager shall aggregate events, e.g., evtTaskEntry, evtTaskProgressChanged, evtTaskExit, evtTaskAsserted, invoked by Gcl.Tcl.Task registered, and invoke events, e.g., evtTaskStarted, evtTclProgressChanged, evtTclTerminated, evtTclAsserted, to UA.NET as needed.
 **[2.1.2.1 Gcl.Tcl ITclApplication](#2_1_2_1_gcl_tcl_interface_itcl_application)**.
 - **[SRS#008]** ITclManager shall define event handlers below and those shall be implemented by Gcl.Tcl.TaskManager.
 
