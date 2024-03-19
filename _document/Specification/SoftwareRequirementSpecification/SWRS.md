@@ -74,7 +74,7 @@
 <summary><font size="5"><b>2.1. Gcl.Tcl</b></font></summary>
 
 - [TOC](#toc)
-- **[SWRS#004]** Gcl.Tcl is a package of types, interfaces, and classes for UA.NET and Gcl.Tcl itself.
+- **[SWRS#004]** Gcl.Tcl is a package of types, interfaces, and classes for UA.NET and Gcl.Tcl.*.
 - **[SWRS#005]** Gcl.Tcl shall play an intermediary role between UA.NET, Gcl.Tcl.*.
 - **[SWRS#006]** Gcl.Tcl shall provide templates, i.e., Gcl.Tcl.Template, Gcl.Tcl.TemplateService, as a sample code.
 - **[SWRS#007]** As an example, let's say that UA.NET needs some task feature of serial communication protocol service, e.g., Gcl.Tcl.TaskScpService.
@@ -88,7 +88,7 @@
 <details open>
 <summary><font size="5"><b>2.1.1 Gcl.Tcl types</b></font></summary>
 
-- **[SWRS#013]** Gcl.Tcl shall define enumeration types below, for UA.NET and Gcl.Tcl itself.
+- **[SWRS#013]** Gcl.Tcl shall define enumeration types below, for UA.NET and Gcl.Tcl.*.
 
 > TclTaskType
 >> Template<br>
@@ -157,12 +157,12 @@
 
 - **[SRS#008]** Gcl.Tcl.TaskManager shall invoke these events to UA.NET as needed.
 - **[SRS#008]** The evtTclStarted shall be invoked when any of Gcl.Tcl.Task registered is started, e.g., evtTaskEntry is invoked, etc.
-- **[SRS#008]** evtTclProgressChanged shall be invoked when any of Gcl.Tcl.Task registered reports progress, e.g., evtTaskProgressChanged is invoked, etc.
+- **[SRS#008]** The evtTclProgressChanged shall be invoked when any of Gcl.Tcl.Task registered reports progress, e.g., evtTaskProgressChanged is invoked, etc.
 - **[SRS#008]** The evtTclTerminated shall be invoked when any of Gcl.Tcl.Task registered is terminated, e.g., evtTaskExit is invoked, etc.
 - **[SRS#008]** The evtTclAsserted shall be invoked when there is something to assert to UA.NET, e.g. error, exception, warning, log, etc. 
 - **[SRS#008]** ITclManager shall aggregate events, e.g., evtTaskEntry, evtTaskProgressChanged, evtTaskExit, evtTaskAsserted, invoked by Gcl.Tcl.Task registered, and invoke events, e.g., evtTaskStarted, evtTclProgressChanged, evtTclTerminated, evtTclAsserted, to UA.NET as needed.
 **[2.1.2.1 Gcl.Tcl ITclApplication](#2_1_2_1_gcl_tcl_interface_itcl_application)**.
-- **[SRS#008]** ITclManager shall define event handlers below and those shall be implemented by Gcl.Tcl.TaskManager.
+- **[SRS#008]** ITclManager shall define event handlers below, those shall be implemented by Gcl.Tcl.TaskManager.
 
 > vidHandleTaskEntry<br>
 > vidHandleTaskProgressChanged<br>
@@ -185,7 +185,7 @@
 <details open>
 <summary><font size="5"><b>2.1.2.3 Gcl.Tcl ITclTask</b></font></summary>
 
-- **[SRS#008]** ITclTask shall define events below, those shall be invoked by Gcl.Tcl.TaskXxxx, e.g., Gcl.Tcl.TaskTemplate.
+- **[SRS#008]** ITclTask shall define events below, those shall be invoked by Gcl.Tcl.Task*, e.g., Gcl.Tcl.TaskTemplate.
 
 > evtTaskEntry<br>
 > evtTaskProgressChanged<br>
@@ -193,15 +193,12 @@
 > evtTaskAsserted<br>
 
 - **[SRS#008]** Gcl.Tcl.TaskManager shall handle these events, **[2.1.2.2. Gcl.Tcl.ITclTaskManager](#2_1_2_2_gcl_tcl_interface_itcl_task_manager)**.
-
 - **[SRS#008]** Gcl.Tcl.Task shall implement these events and invoke them to Gcl.Tcl.TaskManager as needed.
 - **[SRS#008]** The evtTaskEntry shall be invoked when Gcl.Tcl.Task is started.
-- **[SRS#008]** The evtTaskProgressChanged shall be invoked  when Gcl.Tcl.Task reports progress.
+- **[SRS#008]** The evtTaskProgressChanged shall be invoked when Gcl.Tcl.Task reports progress.
 - **[SRS#008]** The evtTaskExit shall be invoked when Gcl.Tcl.Task exits.
 - **[SRS#008]** The evtTaskAsserted shall be invoked when there is something to assert to Gcl.Tcl.TaskManager, e.g. error, exception, warning, log, etc.
-
 - **[SRS#008]** Event handlers are defined in ITclTaskManager **[2.1.2.2 Gcl.Tcl ITclTaskManager](#2_1_2_2_gcl_tcl_interface_itcl_task_manager)**.
-
 - **[SRS#008]** ITclTask shall define methods below, those shall be implemented by Gcl.Tcl.Task to provide task features for Gcl.Tcl.TaskManager.
 
 > vidTaskStart<br>
