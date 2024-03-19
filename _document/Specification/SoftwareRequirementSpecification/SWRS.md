@@ -215,38 +215,27 @@
 <summary><font size="5"><b>2.1.3 Gcl.Tcl classes</b></font></summary>
 
 - **[SRS#008]** Gcl.Tcl shall define classes in order to hand over arguments on each interface defined in Gcl.Tcl.
-- **[SRS#008]** Gcl.Tcl shall define tcl event handler arguments below of each method defined in ITclApplication.
+- **[SRS#008]** Gcl.Tcl shall define event handler arguments below, those of each method defined in ITclApplication.
+> EventTclStartedArgs<br>
+> EventTclProgressChangedArgs<br>
+> EventTclTerminatedArgs<br>
+> EventTclAssertedArgs<br>
+- **[SRS#008]** Gcl.Tcl shall define method arguments below, those of each method defined in ITaskManager.
+
+> TclRegisterArgs<br>
+> TclStartArgs<br>
+> TclPauseArgs<br>
+> TclResumeArgs<br>
+> TclStopArgs<br>
+> TclGetStatusArgs<br>
+> TclDeregisterArgs<br>
+
+- **[SRS#008]** Gcl.Tcl shall define method arguments below, those of each method defined in ITclTask.
+
 > EventTclTriggerContentChangedArgs<br>
 > EventTclProgressChangedArgs<br>
 > EventTclStatusChanged<br>
 > EventTclLogNotified<br>
-- **[SRS#008]** Gcl.Tcl shall define tcl method arguments below those of each method defined in ITaskManager.
-
-> TclTaskRegisterArgs<br>
-> TclTaskStartArgs<br>
-> TclTaskPauseArgs<br>
-> TclTaskResumeArgs<br>
-> TclTaskStopArgs<br>
-> TclTaskStatusArgs<br>
-> TclTaskDeregisterArgs<br>
-
-- **[SRS#008]** Gcl.Tcl shall define method arguments below of each method defined in ITclTask.
-> EventTclTriggerContentChangedArgs<br>
-
->> strContent<br>
-
-> EventTclProgressChangedArgs<br>
-
->> s32Maximum<br>
->> s32Value<br>
-
-> EventTclStatusChanged<br>
-
->> strStatus<br>
-
-> EventTclLogNotified<br>
-
->> strLog<br>
 
 - **[SRS#008]** Gcl.Tcl shall define task event handler arguments below, those of each method defined in ITclTaskManager.
 
