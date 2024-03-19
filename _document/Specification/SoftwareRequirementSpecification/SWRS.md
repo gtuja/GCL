@@ -198,7 +198,7 @@
 - **[SRS#008]** The evtTaskProgressChanged shall be invoked when Gcl.Tcl.Task reports progress.
 - **[SRS#008]** The evtTaskExit shall be invoked when Gcl.Tcl.Task exits.
 - **[SRS#008]** The evtTaskAsserted shall be invoked when there is something to assert to Gcl.Tcl.TaskManager, e.g. error, exception, warning, log, etc.
-- **[SRS#008]** Event handlers are defined in ITclTaskManager **[2.1.2.2 Gcl.Tcl ITclTaskManager](#2_1_2_2_gcl_tcl_interface_itcl_task_manager)**.
+- **[SRS#008]** Event handlers shall be defined in ITclTaskManager **[2.1.2.2 Gcl.Tcl ITclTaskManager](#2_1_2_2_gcl_tcl_interface_itcl_task_manager)**.
 - **[SRS#008]** ITclTask shall define methods below, those shall be implemented by Gcl.Tcl.Task to provide task features for Gcl.Tcl.TaskManager.
 
 > vidTaskStart<br>
