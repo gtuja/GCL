@@ -2,7 +2,11 @@
   "cSpell.words": [
     "Doxygen",
     "Gtuja",
+    "itcl",
+    "itclapplication",
+    "itcltaskmanager",
     "SWDD",
-    "SWRS"
+    "SWRS",
+    "tcltasktype"
   ]
 }
